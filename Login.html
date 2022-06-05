@@ -3,16 +3,33 @@
 <head>
 	<title> Halaman Login </title>
 	<link rel="stylesheet" href="Login.css">
+	<script language="JavaScript">
+        function Login(){ 
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            if (user=="2100018" && pass=="informatika"){
+                alert("Selamat anda berhasil login");
+            }else{
+                alert("Username dan password anda salah!");
+            }
+        }
+        function merah(){
+        	document.getElementById("area").style.color='red'
+        }
+        function pink(){
+        	document.getElementById("area").style.color='pink'
+        }
+    </script>
 </head>
 <body>
 	<div class="container">
 		<h1>Login</h1>
 		<form>
 			<label>Username</label><br>
-			<input type="text"><br>
+			<input type="text" id="username"><br>
 			<label>Password</label><br>
-			<input type="Password"><br>
-			<button><a href="berita.html">Login</a></button>
+			<input type="Password" id="password"><br>
+			<div style="border-style: solid;" id="area" onmouseover="merah()" onmouseout="pink()"><button value="Login" onClick="Login()">Login</button></div>
 		</form>
 	</div>
 
